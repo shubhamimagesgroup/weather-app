@@ -4,6 +4,7 @@ const hbs = require('hbs');
 const app = express();
 const geoCode = require('./utils/geocode');
 const forecast  = require('./utils/forecast');
+const port = process.env.PORT || 3000 ;
 
 //setup static directory to serve static html files
 const dirPath=path.join(__dirname,'../public');
@@ -96,7 +97,7 @@ res.render('404',{
 })
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
-	console.log('server is up on 3000 port');
+	console.log('server is up on' + port + 'port');
 })
