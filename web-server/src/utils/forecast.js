@@ -15,8 +15,8 @@ else if(body.error)
 }
 else{
     // console.log(response.body.currently.temperature + 'degree and the rain possibility' + response.body.currently.precipProbability);
-    // //console.log(response.body.daily.data[0].summary + 'it is currently' + )
-
+    //console.log(response.body.daily.data[0].summary + 'it is currently' + )
+//console.log(body.daily.data);
     callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
 }
 
